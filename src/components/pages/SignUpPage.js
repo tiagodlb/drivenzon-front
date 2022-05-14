@@ -17,7 +17,7 @@ export default function SignUpPage() {
                 name,email,password, confirmPassword
             })
             alert("Cadastro feito com sucesso")
-            navigator("/")
+            navigator("/signin")
         } catch (error) {
          alert("Infelizmente aconteceu um erro! Tente novamente!")
          console.log(error)   
