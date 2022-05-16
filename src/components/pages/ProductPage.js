@@ -21,7 +21,7 @@ export default function ProductPage(props) {
       try {
         setLoading(true);
         const { data } = await axios.get(
-          `http://localhost:5000/api/products/${id}`
+          `https://drivenzon.herokuapp.com/api/products/${id}`
         );
         console.log(data);
         setLoading(false);

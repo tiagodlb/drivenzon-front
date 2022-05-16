@@ -16,7 +16,7 @@ export default function SignInPage() {
   async function handleSubmit(event) {
     event.preventDefault();
     try {
-      await axios.post("http://localhost:5000/sign-in", {
+      await axios.post("https://drivenzon.herokuapp.com/sign-in", {
         email,
         password,
       });
