@@ -1,8 +1,7 @@
+import React from "react";
 import styled from "styled-components";
-import Products from "../Product.js";
-import data from "./../data.js";
-// Trocar todos os 'a' por Link
-export default function HomePage() {
+
+export default function Template() {
   return (
     <Grid>
       <Header className="rows">
@@ -16,11 +15,6 @@ export default function HomePage() {
           <a href="/SignInPage">Sign In</a>
         </div>
       </Header>
-      <Main className="rows center">
-        {data.products.map((product) => (
-          <Products key={product._id} product={product}/>
-        ))}
-      </Main>
       <Footer className="rows center">All right reserved</Footer>
     </Grid>
   );
@@ -111,19 +105,14 @@ const Grid = styled.div`
     margin: 0.1rem;
   }
 
-  .rating span:last-child{
-    color:#404040;
+  .rating span:last-child {
+    color: #404040;
   }
 `;
 
 const Header = styled.header`
   grid-area: Header;
   background-color: #eb3c85;
-`;
-
-const Main = styled.main`
-  grid-area: Main;
-  padding: 1rem;
 `;
 
 const Footer = styled.footer`
